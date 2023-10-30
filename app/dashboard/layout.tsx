@@ -4,8 +4,8 @@ import SideNav from "@/app/ui/dashboard/sidenav";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Acme Dashboard",
-    default: "Acme Dashboard",
+    template: "%s | Next On Dash",
+    default: "Next On Dash",
   },
 };
 
