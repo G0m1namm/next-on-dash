@@ -1,8 +1,9 @@
+import { GeistMono, GeistSans } from "geist/font";
 import type { Metadata } from "next";
 
-import { inter } from "@/app/ui/fonts";
+import { ThemeProvider } from "@/components/mode-toggle";
 
-import "@/app/ui/global.css";
+import "@/app/ui/globals.css";
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +21,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body
+        className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -29,7 +29,8 @@
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.js",
     "scripts/seed.js",
-    "next.config.js"
+    "next.config.js",
+    "tailwind.config.js"
   ],
   "exclude": ["node_modules"]
 }
